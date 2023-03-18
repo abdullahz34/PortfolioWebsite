@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/mobile.css">
+    <title>Login page</title>
+    <script src="https://kit.fontawesome.com/89bffb3f08.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header class="container">
+        <a href="index.html" class="logo">Abdullah<span>Zulfiqar</span></a>
+        <nav>
+            <ul id="sideMenu">
+                <li>
+                    <a href="index.html#about">About Me</a>
+                </li>
+                <li>
+                    <a href="index.html#aboutSection" onclick="opentab('experience','expT')">Experience</a>
+                </li>
+                <li>
+                    <a href="index.html#aboutSection" onclick="opentab('skills','skillsT')">Skills</a>
+                </li>
+                <li>
+                    <a href="index.html#aboutSection" onclick="opentab('education','eduT')">Education</a>
+                </li>
+                <li>
+                    <a href="index.html#portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="index.html#contact">Contact</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="">Login</a>
+                </li>
+                <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+    </header>
+
+
+    <div id="login">
+        <div class="container">
+            <section>
+                <div class="form-container">
+                    <h1 class="subtitle">Login</h1>
+                    <form action="">
+                        <input type="email" name="Email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="password " name="Password " placeholder="Your Password " required>
+                        <button type="submit " class="btn ">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>Copyright © Abdullah Zulfiqar</p>
+    </footer>
+
+
+
+
+
+
+
+    <script>
+        // show / close hamburger menu js
+
+        var sideMenu = document.getElementById("sideMenu");
+
+        function openMenu() {
+            sideMenu.style.right = "0";
+        }
+
+        function closeMenu() {
+            sideMenu.style.right = "-200px";
+        }
+    </script>
+
+</body>
+
+</html>

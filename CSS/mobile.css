@@ -1,0 +1,70 @@
+:root {
+    --primary-color: rgb(22, 126, 167);
+}
+
+@media only screen and (max-width: 768px) {
+    .background {
+        background-position: top;
+        height: 90vh;
+    }
+    .welcome {
+        margin-top: 100%;
+        font-size: 1rem;
+    }
+    .welcome h1 {
+        font-size: 1.875rem;
+    }
+    nav .fa-solid {
+        display: block;
+        font-size: 1.5625rem;
+    }
+    nav ul {
+        background-color: var(--primary-color);
+        position: fixed;
+        top: 0;
+        width: 12.5rem;
+        right: -12.5rem;
+        /*by setting right to -200, it hides mobile nav bar*/
+        height: 100vh;
+        padding-top: 3.125rem;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 1.5625rem;
+    }
+    nav ul .fa-solid {
+        position: absolute;
+        top: 1.5625rem;
+        left: 1.5625rem;
+        cursor: pointer;
+    }
+    .logo {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 2.5rem;
+    }
+    .about-column-1,
+    .about-column-2 {
+        flex-basis: 100%;
+    }
+    .about-column-1 {
+        margin-bottom: 1.875rem;
+    }
+    .about-column-2 {
+        font-size: 0.875rem;
+    }
+    .tab-links {
+        font-size: 1rem;
+        margin-right: 1.25rem;
+    }
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%;
+    }
+    footer {
+        font-size: 0.875rem;
+    }
+}
