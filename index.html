@@ -125,9 +125,9 @@
                 </div>
                 <div class="contact-right">
                     <form>
-                        <input type="text" name="Name" placeholder="Your Name" pattern="[a-zA-Z]+" title="Name must not include any numbers" required>
+                        <input type="text" name="Name" placeholder="Your Name" pattern="^[A-Za-z]+(\s[A-Za-z]+)?$" title="Name must not include numbers, and must either be first name or full name" required>
                         <input type="email" name="Email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Format must be in example@email.com" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message" minlength="10" required></textarea>
+                        <textarea name="Message" rows="6" placeholder="Your Message" minlength="10" maxlength="500" required></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
                 </div>
