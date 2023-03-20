@@ -208,7 +208,7 @@ nav .fa-solid {
 .btn {
     display: block;
     margin: 3.125rem auto;
-    /*Will be in the center, 5.02rem(or 80.32px) top bottom, auto left right*/
+    /*Will be in the center, 3.125rem(or 80.32px) top bottom, auto left right*/
     width: fit-content;
     border: 0.0625rem solid var(--primary-color);
     padding: 0.875rem 3.125rem;
