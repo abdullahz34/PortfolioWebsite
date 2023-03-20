@@ -73,24 +73,6 @@
 
 
 
-
-    <script>
-        // show / close tabs js
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabName, tabTitle) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            document.getElementById(tabTitle).classList.add("active-link");
-            document.getElementById(tabName).classList.add("active-tab");
-        }
-    </script>
-
     <script>
         // show / close hamburger menu js
 
