@@ -19,28 +19,35 @@
         <nav>
             <ul id="sideMenu">
                 <li>
-                    <a href="index.html#about">About Me</a>
+                    <a href="index.php#about">About Me</a>
                 </li>
                 <li>
-                    <a href="index.html#aboutSection" onclick="opentab('experience','expT')">Experience</a>
+                    <a href="index.php#aboutSection" onclick="opentab('experience','expT')">Experience</a>
                 </li>
                 <li>
-                    <a href="index.html#aboutSection" onclick="opentab('skills','skillsT')">Skills</a>
+                    <a href="index.php#aboutSection" onclick="opentab('skills','skillsT')">Skills</a>
                 </li>
                 <li>
-                    <a href="index.html#aboutSection" onclick="opentab('education','eduT')">Education</a>
+                    <a href="index.php#aboutSection" onclick="opentab('education','eduT')">Education</a>
                 </li>
                 <li>
                     <a href="#">Portfolio</a>
                 </li>
                 <li>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.php#contact">Contact</a>
                 </li>
                 <li>
-                    <a href="blog.html">Blog</a>
+                    <a href="blog.php">Blog</a>
                 </li>
                 <li>
-                    <a href="login.html">Login</a>
+                <?php
+                session_start();
+                if(isset($_SESSION['email'])) {
+                    echo '<a href="logout.php">Logout</a>';
+                } else {
+                    echo '<a href="login.html">Login</a>';
+                }
+                ?>
                 </li>
                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>

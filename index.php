@@ -32,16 +32,23 @@
                         <a href="#aboutSection" onclick="opentab('education','eduT')">Education</a>
                     </li>
                     <li>
-                        <a href="portfolio.html">Portfolio</a>
+                        <a href="portfolio.php">Portfolio</a>
                     </li>
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
                     <li>
-                        <a href="blog.html">Blog</a>
+                        <a href="blog.php">Blog</a>
                     </li>
                     <li>
-                        <a href="login.html">Login</a>
+                <?php
+                session_start();
+                if(isset($_SESSION['email'])) {
+                    echo '<a href="logout.php">Logout</a>';
+                } else {
+                    echo '<a href="login.html">Login</a>';
+                }
+                ?>
                     </li>
                     <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                 </ul>

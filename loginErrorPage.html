@@ -20,28 +20,28 @@
         <nav>
             <ul id="sideMenu">
                 <li>
-                    <a href="index.html#about">About Me</a>
+                    <a href="index.php#about">About Me</a>
                 </li>
                 <li>
-                    <a href="index.html#aboutSection" onclick="opentab('experience','expT')">Experience</a>
+                    <a href="index.php#aboutSection" onclick="opentab('experience','expT')">Experience</a>
                 </li>
                 <li>
-                    <a href="index.html#aboutSection" onclick="opentab('skills','skillsT')">Skills</a>
+                    <a href="index.php#aboutSection" onclick="opentab('skills','skillsT')">Skills</a>
                 </li>
                 <li>
-                    <a href="index.html#aboutSection" onclick="opentab('education','eduT')">Education</a>
+                    <a href="index.php#aboutSection" onclick="opentab('education','eduT')">Education</a>
                 </li>
                 <li>
-                    <a href="portfolio.html">Portfolio</a>
+                    <a href="portfolio.php">Portfolio</a>
                 </li>
                 <li>
-                    <a href="index.html#contact">Contact</a>
+                    <a href="index.php#contact">Contact</a>
                 </li>
                 <li>
                     <a href="blog.php">Blog</a>
                 </li>
                 <li>
-                    <a href="">Login</a>
+                    <a href="login.html">Login</a>
                 </li>
                 <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
             </ul>
@@ -58,6 +58,7 @@
                     <form action="login.php" method="post">
                         <input type="email" name="Email" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Format must be in example@email.com">
                         <input type="password" name="Password" placeholder="Your Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        <label for="password" style="color: rgb(192, 48, 48);">Invalid email or password</label>
                         <button type="submit" class="btn">Submit</button>
                     </form>
                 </div>
