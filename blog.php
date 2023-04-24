@@ -1,7 +1,3 @@
-<?php
-    include "addpost.php"
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,9 +77,9 @@
                     <h2>Add blog</h2>
                     <form action="addpost.php" method="post">
                         <input type="text" name="title" placeholder="Title" minlength="3" maxlength="50" required>
-                        <textarea name="description" rows="6" placeholder="Your Message" minlength="10" maxlength="1000"></textarea>
+                        <textarea name="description" rows="6" placeholder="Your Message" minlength="10" maxlength="1000" required></textarea>
                         <div class="buttons">
-                            <button name="newBlogPost" type="submit" class="btn">Post</button>
+                            <button name="newBlogPost" id="postBtn" type="submit" class="btn" onclick="postButton(event)">Post</button>
                             <button type="submit" class="btn" id="clearBtn" onclick="clearButton()">Clear</button>
                         </div>
                     </form>
@@ -92,17 +88,11 @@
 
             <section>
                 <div class="blog-container ">
-                    <article>
-                        <p class="blog-date "><i class="fa-regular fa-clock "></i> 26th December 2018, 5:49 UTC</p>
-                        <h2 class="blog-title ">Title of Blog Post Goes Here</h2>
-                        <p class="blog-text ">Text content of blog post goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac dolor vel risus commodo sollicitudin ac eu mi. Sed vestibulum arcu eu turpis commodo feugiat. Donec quis quam vitae ex suscipit
-                            convallis sit amet eu velit. Nam sed mauris vel nunc egestas eleifend. Nulla facilisi. Nulla auctor lectus vel felis luctus tincidunt.</p>
-                        <div class="blog-line "></div>
-                    </article>
+                <?php include "addpost.php" ?>
                 </div>
             </section>
 
-            <section>
+            <!-- <section>
                 <div class="blog-container ">
                     <article>
                         <p class="blog-date "><i class="fa-regular fa-clock "></i> 26th December 2018, 5:49 UTC</p>
@@ -112,19 +102,7 @@
                         <div class="blog-line "></div>
                     </article>
                 </div>
-            </section>
-
-            <section>
-                <div class="blog-container ">
-                    <article>
-                        <p class="blog-date "><i class="fa-regular fa-clock "></i> 26th December 2018, 5:49 UTC</p>
-                        <h2 class="blog-title ">Title of Blog Post Goes Here</h2>
-                        <p class="blog-text ">Text content of blog post goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis ac dolor vel risus commodo sollicitudin ac eu mi. Sed vestibulum arcu eu turpis commodo feugiat. Donec quis quam vitae ex suscipit
-                            convallis sit amet eu velit. Nam sed mauris vel nunc egestas eleifend. Nulla facilisi. Nulla auctor lectus vel felis luctus tincidunt.</p>
-                        <div class="blog-line "></div>
-                    </article>
-                </div>
-            </section>
+            </section> -->
 
         </div>
     </div>
