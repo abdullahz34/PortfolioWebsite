@@ -16,7 +16,6 @@ function clearButton() {
 }
 
 function postButton(event) {
-    event.preventDefault();
     const title = document.querySelector('input[name="title"]');
     const message = document.querySelector('textarea[name="description"]');
     if (title.value.trim() === '') {
@@ -30,6 +29,7 @@ function postButton(event) {
         message.style.borderColor = '';
     }
     if (title.value.trim() === '' || message.value.trim() === '') {
+        event.preventDefault();
         return;
     } else {
         event.target.form.submit();

@@ -25,7 +25,7 @@ if ($conn->query($sql) !== TRUE) {
 }
 
 // Check if user submitted login form
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_POST["loginBtn"])) {
     // Retrieve user input
     $email = $_POST['Email'];
     $password = $_POST['Password'];

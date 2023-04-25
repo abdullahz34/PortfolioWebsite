@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/blog.css">
     <link rel="stylesheet" href="CSS/mobile.css">
-    <script src="JS/blogButtons.js"></script>
+    <!-- <script src="JS/blogButtons.js"></script> -->
 
     <title>Abdullah's Blog</title>
     <script src="https://kit.fontawesome.com/89bffb3f08.js" crossorigin="anonymous"></script>
@@ -72,6 +72,9 @@
                 <h1>My Blog</h1>
             </div>
 
+            <?php
+            if (isset($_SESSION['email'])) {
+            ?>
             <section>
                 <div class="addblog">
                     <h2>Add blog</h2>
@@ -79,12 +82,34 @@
                         <input type="text" name="title" placeholder="Title" minlength="3" maxlength="50" required>
                         <textarea name="description" rows="6" placeholder="Your Message" minlength="10" maxlength="1000" required></textarea>
                         <div class="buttons">
-                            <button name="newBlogPost" id="postBtn" type="submit" class="btn" onclick="postButton(event)">Post</button>
+                            <button name="postBlog" id="postBtn" type="submit" class="btn" onclick="postButton(event)">Post</button>
                             <button type="submit" class="btn" id="clearBtn" onclick="clearButton()">Clear</button>
                         </div>
                     </form>
                 </div>
             </section>
+            <?php }?>
+
+            <form method="post">
+                <label for="month-filter">Filter by months:</label>
+                <select name="month-filter" id="month-filter">
+                    <option value="">select month</option>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <button type="submit">Filter</button>
+            </form>
+
 
             <section>
                 <div class="blog-container ">
@@ -111,6 +136,9 @@
     <footer>
         <p>Copyright © Abdullah Zulfiqar</p>
     </footer>
+
+    <script src="JS/blogButtons.js"></script>
+
 
     <script>
         // show / close hamburger menu js
