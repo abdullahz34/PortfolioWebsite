@@ -17,7 +17,7 @@
 
 <body>
     <header class="container">
-        <a href="index.html" class="logo">Abdullah<span>Zulfiqar</span></a>
+        <a href="index.php" class="logo">Abdullah<span>Zulfiqar</span></a>
         <nav>
             <ul id="sideMenu">
                 <li>
@@ -39,7 +39,7 @@
                     <a href="index.php#contact">Contact</a>
                 </li>
                 <li>
-                    <a href="#">Blog</a>
+                    <a href="blog.php">Blog</a>
                 </li>
                 <li>
                 <?php
@@ -78,12 +78,13 @@
             <section>
                 <div class="addblog">
                     <h2>Add blog</h2>
-                    <form action="addpost.php" method="post">
+                    <form action="" method="post">
                         <input type="text" name="title" placeholder="Title" minlength="3" maxlength="50" required>
                         <textarea name="description" rows="6" placeholder="Your Message" minlength="10" maxlength="1000" required></textarea>
                         <div class="buttons">
                             <button name="postBlog" id="postBtn" type="submit" class="btn" onclick="postButton(event)">Post</button>
                             <button type="submit" class="btn" id="clearBtn" onclick="clearButton()">Clear</button>
+                            <button name="previewPost" id="previewBtn" type="submit" class="btn" onclick="postButton(event)">Preview post</button>
                         </div>
                     </form>
                 </div>
@@ -91,9 +92,9 @@
             <?php }?>
 
             <form method="post">
-                <label for="month-filter">Filter by months:</label>
+                <label for="month-filter">Filter by month:&nbsp;</label>
                 <select name="month-filter" id="month-filter">
-                    <option value="">select month</option>
+                    <option value="">All months</option>
                     <option value="01">January</option>
                     <option value="02">February</option>
                     <option value="03">March</option>

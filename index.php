@@ -16,7 +16,7 @@
 <body>
     <div class="background">
         <header class="container">
-            <a href="index.html" class="logo">Abdullah<span>Zulfiqar</span></a>
+            <a href="index.php" class="logo">Abdullah<span>Zulfiqar</span></a>
             <nav>
                 <ul id="sideMenu">
                     <li>
