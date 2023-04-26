@@ -36,7 +36,7 @@ if (isset($_POST["previewPost"])) {
   $previewDescription = $description . " [PREVIEW]";
 
   // Display preview post
-  echo '<article>';
+  echo '<article id="preview">';
   echo '<p class="blog-date"><i class="fa-regular fa-clock"></i> ' . date("jS F Y, g:i A T") . '</p>';
   echo '<h2 class="blog-title">' . $previewTitle . '</h2>';
   echo '<p class="blog-text">' . $previewDescription . '</p>';
@@ -47,14 +47,20 @@ if (isset($_POST["previewPost"])) {
 
 echo '<script>document.addEventListener("DOMContentLoaded", function() {
   setTimeout(function() {
-    if(confirm("Would you like to post the preview or delete it?")) {
+    if(confirm("Would you like to post the preview(press OK) or go back and edit(press Cancel)?")) {
       window.location.href = "blog.php?preview=accepted&title='.urlencode($title).'&description='.urlencode($description).'";
     } else {
-      window.location.href = "blog.php";
+      const titleInput = document.querySelector(\'input[name="title"]\');
+      const descriptionInput = document.querySelector(\'textarea[name="description"]\');
+      titleInput.value = "'.htmlspecialchars($title).'";
+      descriptionInput.value = "'.htmlspecialchars($description).'";
+      titleInput.focus();
+      const preview = document.querySelector(\'#preview\');
+      preview.parentElement.removeChild(preview);
+
     }
   }, 1000); // Wait for 1 second
 });</script>';
-
 
 
 }
