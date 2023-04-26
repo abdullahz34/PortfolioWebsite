@@ -113,11 +113,12 @@ if (mysqli_num_rows($result) > 0) {
     echo '</article>';
   }
 } else {
-    // // If user is not already logged in, redirect to login.html and inform that there are 0 blog entries
-    // if (!isset($_SESSION['email'])) {
-    //     echo '<script>alert("There are 0 entries in the blog, please login to post."); window.location.href = "login.html";</script>';
-    // }
-    echo '0 blog results found.';
+    // If user is not already logged in, redirect to login.html and inform that there are 0 blog entries
+    if (!isset($_SESSION['email'])) {
+        echo 'There are 0 entries in the blog for this month filter, please login to post.';
+    } else {
+      echo '0 blog results found.';
+    }
 }
 
 

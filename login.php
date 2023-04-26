@@ -47,8 +47,6 @@ if (isset($_POST["loginBtn"])) {
 
 $conn->close();
 
-//TODO
-// - HASH PASSWORD.
 
 ?>
 
