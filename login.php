@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $servername = "localhost";
 $username = "root";
@@ -36,6 +35,7 @@ if (isset($_POST["loginBtn"])) {
     
     // Check if user was found
     if ($result->num_rows > 0) {
+        session_start();
         // User was found, set session variables and redirect
         $_SESSION['email'] = $email;
         header("Location: blog.php");
