@@ -14,5 +14,5 @@ To run the website on localhost:
 1. Download and install MAMP or XAMPP on your computer.
 2. Start the web server and MySQL database through the MAMP/XAMPP control panel.
 3. Copy the website files to the document root folder of the web server. In MAMP, the default document root is /Applications/MAMP/htdocs/, while in XAMPP it is /opt/lampp/htdocs/ on Linux or C:\xampp\htdocs\ on Windows.
-4. Import the SQL script provided in the "database" folder to create the necessary tables and data. In MAMP, you can use phpMyAdmin, which is accessible from the control panel. In XAMPP, you can use phpMyAdmin by navigating to http://localhost/phpmyadmin/ in your web browser.
+4. Import the SQL script provided in the "database" file to create the necessary tables and data. In MAMP, you can use phpMyAdmin, which is accessible from the control panel. In XAMPP, you can use phpMyAdmin by navigating to http://localhost/phpmyadmin/ in your web browser.
 6. Open the website in a web browser by navigating to http://localhost/ or http://localhost/your-website-folder/ if you placed the files in a subfolder. You should see the homepage of your portfolio website.
